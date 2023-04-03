@@ -2,7 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- 50_ 인터넷 사용권한 설정 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
+        android:name=".GlobalApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -34,6 +38,21 @@
         <activity
             android:name=".activities.MainActivity"
             android:exported="false" />
+
+        <!--  53_ 카카오 redirect URI 액티비티 등록 -->
+        <activity
+            android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!-- Redirect URI: "kakao${NATIVE_APP_KEY}://oauth" -->
+                <data android:host="oauth"
+                    android:scheme="kakao8faf5cafa96e1731070ef00dcd9aee33" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
