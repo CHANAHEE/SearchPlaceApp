@@ -1,7 +1,8 @@
-package com.example.tp_searchplaceapp
+package com.example.tp_searchplaceapp.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.tp_searchplaceapp.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
