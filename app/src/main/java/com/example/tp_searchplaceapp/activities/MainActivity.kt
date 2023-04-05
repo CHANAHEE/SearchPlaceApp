@@ -24,6 +24,9 @@ import com.example.tp_searchplaceapp.R
 import com.example.tp_searchplaceapp.databinding.ActivityMainBinding
 import com.example.tp_searchplaceapp.fragments.PlaceListFragment
 import com.example.tp_searchplaceapp.fragments.PlaceMapFragment
+import com.example.tp_searchplaceapp.model.KakaoSearchPlaceResponse
+import com.example.tp_searchplaceapp.network.RetrofitApiService
+import com.example.tp_searchplaceapp.network.RetrofitHelper
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationCallback
 import com.google.android.gms.location.LocationResult
@@ -31,6 +34,10 @@ import com.google.android.gms.location.LocationServices
 import com.google.android.gms.location.Priority
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayout.OnTabSelectedListener
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
 
 class MainActivity : AppCompatActivity() {
     val binding: ActivityMainBinding by lazy { ActivityMainBinding.inflate(layoutInflater) }
@@ -45,6 +52,8 @@ class MainActivity : AppCompatActivity() {
     // Google Fused Location API 사용 : play-services-location
     val providerClient: FusedLocationProviderClient by lazy { LocationServices.getFusedLocationProviderClient(this) }
 
+    // 검색 결과 응답객체 참조변수
+    var searchPlaceResponse: KakaoSearchPlaceResponse? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
@@ -66,11 +75,11 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab?) {
-                TODO("Not yet implemented")
+
             }
 
             override fun onTabReselected(tab: TabLayout.Tab?) {
-                TODO("Not yet implemented")
+
             }
 
         })
@@ -146,7 +155,30 @@ class MainActivity : AppCompatActivity() {
 
     // 카카오 장소 검색 API 를 파싱하는 작업메소드
     private fun searchPlace() {
-        Toast.makeText(this, "${searchQuery} - ${myLocation?.latitude} , ${myLocation?.longitude}", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this, "${searchQuery} - ${myLocation?.latitude} , ${myLocation?.longitude}", Toast.LENGTH_SHORT).show()
+
+        // Kakao keyword place search api .. REST API 작업 - Retrofit
+        val retrofit: Retrofit = RetrofitHelper.getRetrofitInstance("https://dapi.kakao.com")
+        val retrofitService = retrofit.create(RetrofitApiService::class.java)
+        retrofitService.getSearchPlace(searchQuery,myLocation?.latitude.toString(),myLocation?.longitude.toString())
+            .enqueue(object : Callback<KakaoSearchPlaceResponse>{
+                override fun onResponse(
+                    call: Call<KakaoSearchPlaceResponse>,
+                    response: Response<KakaoSearchPlaceResponse>
+                ) {
+                    searchPlaceResponse = response.body()
+                    // 무조건 검색이 완료되면 ListFragment 부터 보여주기
+                    supportFragmentManager.beginTransaction().replace(R.id.container_fragment,PlaceListFragment()).commit()
+
+                    // 탭 버튼의 위치를 ListFragment tab 으로 변경
+                    binding.tabLayout.getTabAt(0)?.select()
+                }
+
+                override fun onFailure(call: Call<KakaoSearchPlaceResponse>, t: Throwable) {
+                    Toast.makeText(this@MainActivity, "서버에 문제가 있습니다.", Toast.LENGTH_SHORT).show()
+                }
+
+            })
     }
 
     // 특정 키워드 단축 검색버튼들에 리스너 처리
