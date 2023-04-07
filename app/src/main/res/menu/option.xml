@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:id="@+id/menu_aa"
-        android:title="aa"/>
+        android:title="Help"/>
     <item android:id="@+id/menu_bb"
-        android:title="bb"/>
+        android:title="Library"/>
 </menu>
