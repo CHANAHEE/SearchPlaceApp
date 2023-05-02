@@ -1,13 +1,13 @@
-package com.cha.tp_searchplaceapp.activities
+package com.cha.searchplace.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
-import com.cha.tp_searchplaceapp.G
-import com.cha.tp_searchplaceapp.R
-import com.cha.tp_searchplaceapp.databinding.ActivityEmailSigninBinding
-import com.cha.tp_searchplaceapp.model.UserAccount
+import com.cha.searchplace.G
+import com.cha.searchplace.R
+import com.cha.searchplace.databinding.ActivityEmailSigninBinding
+import com.cha.searchplace.model.UserAccount
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.auth.User
 

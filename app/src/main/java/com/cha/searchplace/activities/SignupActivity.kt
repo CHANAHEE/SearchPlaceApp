@@ -1,12 +1,12 @@
-package com.cha.tp_searchplaceapp.activities
+package com.cha.searchplace.activities
 
 import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View.OnClickListener
 import androidx.appcompat.app.AlertDialog
-import com.cha.tp_searchplaceapp.R
-import com.cha.tp_searchplaceapp.databinding.ActivitySignupBinding
+import com.cha.searchplace.R
+import com.cha.searchplace.databinding.ActivitySignupBinding
 import com.google.firebase.firestore.FirebaseFirestore
 
 class SignupActivity : AppCompatActivity() {

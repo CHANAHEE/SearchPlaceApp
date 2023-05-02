@@ -1,13 +1,13 @@
-package com.cha.tp_searchplaceapp.fragments
+package com.cha.searchplace.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.cha.tp_searchplaceapp.activities.MainActivity
-import com.cha.tp_searchplaceapp.adapters.PlaceListRecyclerAdapter
-import com.cha.tp_searchplaceapp.databinding.FragmentPlaceListBinding
+import com.cha.searchplace.activities.MainActivity
+import com.cha.searchplace.adapters.PlaceListRecyclerAdapter
+import com.cha.searchplace.databinding.FragmentPlaceListBinding
 
 class PlaceListFragment : Fragment() {
 

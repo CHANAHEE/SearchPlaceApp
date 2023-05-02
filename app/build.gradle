@@ -5,15 +5,15 @@ plugins {
 }
 
 android {
-    namespace 'com.cha.tp_searchplaceapp'
+    namespace 'com.cha.searchplace'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.cha.tp_searchplaceapp"
+        applicationId "com.cha.searchplace"
         minSdk 24
         targetSdk 33
-        versionCode 2
-        versionName "1.1"
+        versionCode 3
+        versionName "1.2"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

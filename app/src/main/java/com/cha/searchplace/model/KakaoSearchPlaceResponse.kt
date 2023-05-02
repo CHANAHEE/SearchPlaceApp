@@ -1,4 +1,4 @@
-package com.cha.tp_searchplaceapp.model
+package com.cha.searchplace.model
 
 data class KakaoSearchPlaceResponse(var meta: PlaceMeta, var documents: MutableList<Place>)
 

@@ -1,4 +1,4 @@
-package com.cha.tp_searchplaceapp.model
+package com.cha.searchplace.model
 
 
 // 73_ Gson 으로 받아올 데이터를 데이터 클래스에 저장하기 위해...

@@ -1,4 +1,4 @@
-package com.cha.tp_searchplaceapp.adapters
+package com.cha.searchplace.adapters
 
 import android.content.Context
 import android.content.Intent
@@ -6,9 +6,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.cha.tp_searchplaceapp.activities.PlaceUrlActivity
-import com.cha.tp_searchplaceapp.databinding.RecyclerListFragmentItemBinding
-import com.cha.tp_searchplaceapp.model.Place
+import com.cha.searchplace.activities.PlaceUrlActivity
+import com.cha.searchplace.databinding.RecyclerListFragmentItemBinding
+import com.cha.searchplace.model.Place
 
 class PlaceListRecyclerAdapter(var context: Context, var documents: MutableList<Place>) : RecyclerView.Adapter<PlaceListRecyclerAdapter.VH>() {
 

@@ -1,4 +1,4 @@
-package com.cha.tp_searchplaceapp.model
+package com.cha.searchplace.model
 
 
 // 42_ data class 만들어두기

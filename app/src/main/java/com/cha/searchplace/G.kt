@@ -1,6 +1,6 @@
-package com.cha.tp_searchplaceapp
+package com.cha.searchplace
 
-import com.cha.tp_searchplaceapp.model.UserAccount
+import com.cha.searchplace.model.UserAccount
 
 
 // 43_ 전역변수 처럼 활용하기 위한 G 클래스

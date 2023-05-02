@@ -1,4 +1,4 @@
-package com.cha.tp_searchplaceapp.activities
+package com.cha.searchplace.activities
 
 import android.Manifest
 import android.content.pm.PackageManager
@@ -20,13 +20,13 @@ import androidx.activity.result.ActivityResultCallback
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
-import com.cha.tp_searchplaceapp.R
-import com.cha.tp_searchplaceapp.databinding.ActivityMainBinding
-import com.cha.tp_searchplaceapp.fragments.PlaceListFragment
-import com.cha.tp_searchplaceapp.fragments.PlaceMapFragment
-import com.cha.tp_searchplaceapp.model.KakaoSearchPlaceResponse
-import com.cha.tp_searchplaceapp.network.RetrofitApiService
-import com.cha.tp_searchplaceapp.network.RetrofitHelper
+import com.cha.searchplace.R
+import com.cha.searchplace.databinding.ActivityMainBinding
+import com.cha.searchplace.fragments.PlaceListFragment
+import com.cha.searchplace.fragments.PlaceMapFragment
+import com.cha.searchplace.model.KakaoSearchPlaceResponse
+import com.cha.searchplace.network.RetrofitApiService
+import com.cha.searchplace.network.RetrofitHelper
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationCallback
 import com.google.android.gms.location.LocationResult
