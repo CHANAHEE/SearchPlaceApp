@@ -7,30 +7,26 @@
     tools:context="com.cha.tp_searchplaceapp.activities.LoginActivity">
 
     <!-- 6_ 화면설계하자. -->
-    <TextView
-        android:id="@+id/tv_title"
+    <ImageView
+        android:id="@+id/iv_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="장소"
-        android:textStyle="bold"
-        android:textSize="40sp"
-        android:textColor="@color/black"
-        android:padding="16dp"
+        android:src="@mipmap/app_logo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="80dp"/>
-
     <TextView
         android:id="@+id/tv_go"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="장소를 둘러보세요 >"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/tv_title"
+        android:layout_below="@id/iv_logo"
         android:textColor="@color/black"
         android:paddingTop="8dp"
         android:paddingBottom="8dp"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/bg_tv_go"/>
 
     <!--  8_ 밑에서부터 화면 배치 -->
