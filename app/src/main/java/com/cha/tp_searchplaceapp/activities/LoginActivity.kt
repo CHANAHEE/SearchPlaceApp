@@ -64,9 +64,10 @@ class LoginActivity : AppCompatActivity() {
         Log.i("keyhash",keyHash)
     }
 
+    var callback: ((OAuthToken?, Throwable?) -> Unit)? = null
     private fun clickLoginKakao(){
 
-        val callback:(OAuthToken?,Throwable?)->Unit = { token, error ->
+        callback = { token, error ->
             if(token != null){
                 //Snackbar.make(binding.root,"카카오 로그인 성공",Snackbar.LENGTH_SHORT).show()
 
@@ -84,18 +85,23 @@ class LoginActivity : AppCompatActivity() {
                     }
                 }
             }else{
-                //Snackbar.make(binding.root,"카카오 로그인 실패",Snackbar.LENGTH_SHORT).show()
+                Log.i("aoifnrb",error.toString())
+                Snackbar.make(binding.root,"카카오 로그인 실패",Snackbar.LENGTH_SHORT).show()
+                loginWithKakaoAccount()
             }
         }
 
         // 54_ 카카오톡이 설치되어 있으면 카톡으로 로그인, 아니면 카카오계정 로그인
         if(UserApiClient.instance.isKakaoTalkLoginAvailable(this)){
-            UserApiClient.instance.loginWithKakaoTalk(this, callback = callback)
+            UserApiClient.instance.loginWithKakaoTalk(this, callback = callback!!)
         } else {
-            UserApiClient.instance.loginWithKakaoAccount(this, callback = callback)
+            UserApiClient.instance.loginWithKakaoAccount(this, callback = callback!!)
         }
     }
 
+    private fun loginWithKakaoAccount(){
+        UserApiClient.instance.loginWithKakaoAccount(this, callback = callback!!)
+    }
     private fun clickLoginGoogle(){
         // 58_ Google 에서 검색 [ 안드로이드 구글 로그인 ]
 
