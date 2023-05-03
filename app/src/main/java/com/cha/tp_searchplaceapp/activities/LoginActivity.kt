@@ -1,4 +1,4 @@
-package com.cha.searchplace.activities
+package com.cha.tp_searchplaceapp.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -9,12 +9,12 @@ import androidx.activity.result.ActivityResult
 import androidx.activity.result.ActivityResultCallback
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
-import com.cha.searchplace.G
-import com.cha.searchplace.databinding.ActivityLoginBinding
-import com.cha.searchplace.model.NidUserInfoResponse
-import com.cha.searchplace.model.UserAccount
-import com.cha.searchplace.network.RetrofitApiService
-import com.cha.searchplace.network.RetrofitHelper
+import com.cha.tp_searchplaceapp.G
+import com.cha.tp_searchplaceapp.databinding.ActivityLoginBinding
+import com.cha.tp_searchplaceapp.model.NidUserInfoResponse
+import com.cha.tp_searchplaceapp.model.UserAccount
+import com.cha.tp_searchplaceapp.network.RetrofitApiService
+import com.cha.tp_searchplaceapp.network.RetrofitHelper
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions

@@ -1,7 +1,7 @@
-package com.cha.searchplace.network
+package com.cha.tp_searchplaceapp.network
 
-import com.cha.searchplace.model.KakaoSearchPlaceResponse
-import com.cha.searchplace.model.NidUserInfoResponse
+import com.cha.tp_searchplaceapp.model.KakaoSearchPlaceResponse
+import com.cha.tp_searchplaceapp.model.NidUserInfoResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Header

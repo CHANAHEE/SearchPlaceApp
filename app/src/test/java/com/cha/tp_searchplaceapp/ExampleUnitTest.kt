@@ -1,4 +1,4 @@
-package com.cha.searchplace
+package com.cha.tp_searchplaceapp
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package com.cha.searchplace.network
+package com.cha.tp_searchplaceapp.network
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

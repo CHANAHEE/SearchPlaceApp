@@ -7,7 +7,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
-        android:name="com.cha.searchplace.GlobalApplication"
+        android:name="com.cha.tp_searchplaceapp.GlobalApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -19,19 +19,19 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name="com.cha.searchplace.activities.PlaceUrlActivity"
+            android:name="com.cha.tp_searchplaceapp.activities.PlaceUrlActivity"
             android:exported="false" />
         <activity
-            android:name="com.cha.searchplace.activities.EmailSigninActivity"
+            android:name="com.cha.tp_searchplaceapp.activities.EmailSigninActivity"
             android:exported="false" />
         <activity
-            android:name="com.cha.searchplace.activities.SignupActivity"
+            android:name="com.cha.tp_searchplaceapp.activities.SignupActivity"
             android:exported="false" />
         <activity
-            android:name="com.cha.searchplace.activities.LoginActivity"
+            android:name="com.cha.tp_searchplaceapp.activities.LoginActivity"
             android:exported="false" />
         <activity
-            android:name="com.cha.searchplace.activities.SplashActivity"
+            android:name="com.cha.tp_searchplaceapp.activities.SplashActivity"
             android:exported="true"
             android:theme="@style/SplashTheme">
             <intent-filter>
@@ -41,7 +41,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.cha.searchplace.activities.MainActivity"
+            android:name="com.cha.tp_searchplaceapp.activities.MainActivity"
             android:exported="false" /> <!-- 53_ 카카오 redirect URI 액티비티 등록 -->
         <activity
             android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"

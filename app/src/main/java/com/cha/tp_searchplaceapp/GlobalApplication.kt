@@ -1,4 +1,4 @@
-package com.cha.searchplace
+package com.cha.tp_searchplaceapp
 
 import android.app.Application
 import com.kakao.sdk.common.KakaoSdk

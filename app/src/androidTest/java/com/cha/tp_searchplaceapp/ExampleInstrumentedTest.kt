@@ -1,4 +1,4 @@
-package com.cha.searchplace
+package com.cha.tp_searchplaceapp
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

@@ -1,4 +1,4 @@
-package com.cha.searchplace.activities
+package com.cha.tp_searchplaceapp.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import androidx.core.os.postDelayed
-import com.cha.searchplace.R
+import com.cha.tp_searchplaceapp.R
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

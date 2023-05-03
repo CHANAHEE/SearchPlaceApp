@@ -1,11 +1,11 @@
-package com.cha.searchplace.activities
+package com.cha.tp_searchplaceapp.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.webkit.WebChromeClient
 import android.webkit.WebViewClient
-import com.cha.searchplace.R
-import com.cha.searchplace.databinding.ActivityPlaceUrlBinding
+import com.cha.tp_searchplaceapp.R
+import com.cha.tp_searchplaceapp.databinding.ActivityPlaceUrlBinding
 
 class PlaceUrlActivity : AppCompatActivity() {
 

@@ -14,6 +14,22 @@
       },
       "oauth_client": [
         {
+          "client_id": "447530563254-236ralon19811faivqn0af6g7olm06vi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cha.searchplace",
+            "certificate_hash": "dd540fa1b3297bc14776730fde53165a8edbc1ed"
+          }
+        },
+        {
+          "client_id": "447530563254-acuhrjli8md3q9httdd5sg71j4ac5osr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cha.searchplace",
+            "certificate_hash": "6dbce7d0d51229ada905d978394235f0448e658a"
+          }
+        },
+        {
           "client_id": "447530563254-80jks04hjr6hg0llph3igu938fcj910g.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -36,28 +52,12 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:447530563254:android:01a662db8ffb8d2b4a9817",
+        "mobilesdk_app_id": "1:447530563254:android:2e4ff72660b32fff4a9817",
         "android_client_info": {
           "package_name": "com.cha.tp_searchplaceapp"
         }
       },
       "oauth_client": [
-        {
-          "client_id": "447530563254-68e31aqmgo3q0s1jhs9nentv50mfe351.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.cha.tp_searchplaceapp",
-            "certificate_hash": "6dbce7d0d51229ada905d978394235f0448e658a"
-          }
-        },
-        {
-          "client_id": "447530563254-urumuvjkhk0shf645cfe0q5qvt2noi51.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.cha.tp_searchplaceapp",
-            "certificate_hash": "d2c7f46df37f97c20682a37e0e1a8213073be03f"
-          }
-        },
         {
           "client_id": "447530563254-80jks04hjr6hg0llph3igu938fcj910g.apps.googleusercontent.com",
           "client_type": 3
